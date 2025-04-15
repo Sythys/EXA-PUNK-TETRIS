@@ -10,35 +10,9 @@ TEST MRD
 FJMP WAIT
 NOOP
 NOOP
-
 NOOP
 NOOP
-
-NOOP
-NOOP
-
-NOOP
-NOOP
-
 COPY M X
-
-NOOP
-NOOP
-NOOP
-NOOP
-NOOP
-
-NOOP
-NOOP
-NOOP
-NOOP
-NOOP
-
-NOOP
-NOOP
-NOOP
-NOOP
-NOOP
 
 SWIZ X 0004 T
 TJMP INIT
@@ -258,7 +232,7 @@ SEEK 9999
 SEEK -1
 addi f x X
 
-copy 20 T
+copy 8 T
 mark send
 Subi t 1 t
 TJMP send
@@ -416,7 +390,7 @@ COPY 0 F
 jump start
 
 MARK RESET
-copy 20 T
+copy 8 T
 mark wait_1
 Subi t 1 t
 tJMP wait_1
