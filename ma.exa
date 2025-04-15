@@ -32,7 +32,9 @@ WAIT
 SEEK 9999
 SEEK -12
 
+NOTE #################
 NOTE PAD ### < X > ###
+NOTE #################
 MARK PAD_X
 COPY #PADX X
 TEST X = F
@@ -108,7 +110,9 @@ JUMP PAD_Y
 MARK COMMIT_MOVE_LEFT
 REPL SOUND70
 
+NOTE #################
 NOTE PAD ### < Y > ###
+NOTE #################
 MARK PAD_Y
 TEST #PADY = F
 COPY #PADY F
@@ -131,7 +135,9 @@ VOID M
 VOID M
 VOID M
 
+NOTE ################
 NOTE BUTTON # | X | #
+NOTE ################
 MARK BUTTON_X
 SWIZ #PADB 0001 X
 TEST X = F
@@ -271,7 +277,9 @@ ADDI F 3 X
 SEEK -1
 MODI X 4 F
 
+NOTE ################
 NOTE BUTTON # | Y | #
+NOTE ################
 MARK BUTTON_Y_
 SEEK 9999
 SEEK -6
@@ -412,7 +420,9 @@ ADDI F 5 X
 SEEK -1
 MODI X 4 F 
 
+NOTE ################
 NOTE BUTTON # | Z | #
+NOTE ################
 MARK BUTTON_Z_
 SEEK 9999
 SEEK -4
@@ -425,7 +435,9 @@ TEST X = 0
 TJMP BUTTON_START
 NOTE ### INPUT
 
+NOTE ##################
 NOTE BUTTON # | START |
+NOTE ##################
 MARK BUTTON_START
 SWIZ #PADB 0004 X
 TEST X = F
@@ -435,6 +447,9 @@ TEST X = 0
 TJMP END
 NOTE ### INPUT
 
+NOTE ###############
+NOTE END - END - END 
+NOTE ###############
 MARK END
 NOTE SHIFT ALL INPUTS
 COPY 0 F
