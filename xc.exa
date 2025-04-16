@@ -35,7 +35,7 @@ test x < 10
 FJMP CC2
 addi gy 4 x 
 divi x 5 x
-test x < 17
+TEST X < 20
 FJMP CC2
 TEST CI < -9998
 FJMP CC2
@@ -59,7 +59,7 @@ test x < 10
 FJMP CC3
 addi gy 4 x 
 divi x 5 x
-test x < 17
+TEST X < 20
 FJMP CC3
 TEST CI < -9998
 FJMP CC3
@@ -116,7 +116,7 @@ test x < 10
 FJMP CC4
 addi gy 4 x 
 divi x 5 x
-test x < 17
+TEST X < 20
 FJMP CC4
 TEST CI < -9998
 FJMP CC4
@@ -173,7 +173,7 @@ test x < 10
 FJMP CC5
 addi gy 4 x 
 divi x 5 x
-test x < 17
+TEST X < 20
 FJMP CC5
 TEST CI < -9998
 FJMP CC5
@@ -197,7 +197,7 @@ test x < 10
 FJMP CC6
 addi gy 4 x 
 divi x 5 x
-test x < 17
+TEST X < 20
 FJMP CC6
 TEST CI < -9998
 FJMP CC6
@@ -227,7 +227,7 @@ DIVI T 5 T
 MULI T 100 T
 ADDI x t X
 SEEK 9999
-SEEK -1
+SEEK -2
 addi f x X
 
 MODE
@@ -236,7 +236,6 @@ TEST MRD
 FJMP send
 COPY X M
 MODE
-COPY 1 M
 NOOP
 NOOP
 NOOP
@@ -268,7 +267,7 @@ test x < 10
 FJMP CC7
 addi gy 4 x 
 divi x 5 x
-test x < 17
+TEST X < 20
 FJMP CC7
 TEST CI < -9998
 FJMP CC7
