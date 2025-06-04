@@ -1,0 +1,777 @@
+﻿MANIHSTH we’re human beings. And we’re hackers.
+
+elcome to the inaugural issue of TRASH WORLD NEWS. You
+Wmight be wondering why we’re launching a new ‘zine at a time This issue is all about the small but mighty EXA, the
+
+when everything is going digital. The answer is simple: We need a place technology that took over the world without anyone
+
+to share vital and sensitive infonnation about computer systems and noticing. These little things are behind almost everything
+
+netvvorks— a place that doesn’t depend on computers itself. now, from handheld game consoles to huge corporate
+servers.
+
+Have you noticed it lately? Everywhere you go, whatever you do,
+there’s a bank of computers at work behind the scenes making decisions We’ll take you through the ins and outs of those, and
+about you. Society at large seems to accept it as a norm that computer hopefullyyou’ll be up and running fast, even ifyou’ve never
+programs designed by the powers that be will determine our value to programmed a computer before.
+them and treat us accordingly.
+
+._. "'_‘
+
+L._|, ~ _._ _ - _._. ~
+
+We also have a ton of potentially useful field reports
+from hackers around the world on topics like data storage
+formats, noteworthy computer networks, and more.
+
+Finally, there’s a real interesting look at the disease
+Computers by themselves are just tools that do what they’re known as “the phage” from a research biologist who studied
+
+programmed to do. That’s why it’s up to us to take up the fight. We need it on her own time and kindly shared her notes with us. I
+to equip ourselves with tools and knowledge so we can push back against guarantee you won’t get this information anywhere else.
+this rising tide— so that every time some big system treats us like we’re
+just a bunch of punch cards for them to process, we can write programs
+to throw wrenches in the gears of those grand designs, to force them to
+acknowledge us as the people we are. The hacker spirit lives on. Ghast out
+
+  
+
+
+
+The first step in taking back our autonomy from computers is
+knowing how to use them. And that means programming with EXAs.
+
+What Are EXAs?
+EXAis short for EXecutionAgent. It’s a small program that can move from one computer
+
+to another through a network without interrupting what it’s doing, even across huge, real-
+world distances.
+
+Big tech companies like Axiom and TEC developed the EXA standard earlier this
+decade, guided by a vision they called “distributed network programming.” EXAs make it
+easy to connect everything in the world together because they can transfer and process
+data no matter what the underlying hardware is. Today, they’re the lifeblood of every
+modern computer network.
+
+Code, Values, and Registers
+In addition to their physical-looking presence inside a computer network, every
+
+EXA contains code and registers. If you’re connected to a network using the EXODUS
+development enviromnent you’ll see a window on the left side for each ofyour EXAs that
+allows you to edit their code and view their registers.
+EThis is a list of instructions that tell I A I lIl> I XA *
+the EXA what to do. It s written in a special LINK 899
+computer language specifically designed GRAB Zoo
+for them. We’ll dig into the language in the [$25 899
+tutori-al sect-ion comi-ng up next. HALT NONE
+
+_ NONE
+ Think of these as slots that
+can store values. These values can be either r ETGWLOBAEL A
+numbers, like 38 or 5074 or -203, or keywords, like SECRET or TRASH WORLD NEWS
+or ABC123. Registers can be read and written by instructions in your code.
+
+There are different types of registers. Some just store values, so when you read them
+they’ll give you the value of whatever you last wrote to them (these are the X and T
+registers). Other registers are actually interfaces to more advanced features, like reading
+or writing files (the F register) or communicating with other EXAs (the M register). Don’t
+worry about using all the registers right away. You’ll learn how to use the different types of
+registers in the tutorials. N EXT PAGE > > >
+
+  -
+
+
+
+
+
+
+I truly believe anyone can learn EXA programming. That’s why I’ve set up a
+network with some tutorials you can try. Give it a shot even ifyou think you’re not a
+programmer. You might surprise yourself.
+
+OK. The next task is a lot like the first one except you’ll need to read and write the
+file instead ofjust moving it. Read the requirements in EXODUS for a full explanation.
+Do that now.
+
+To read or write the file held by an EXA, we have to use the F register. We’ll
+also be using the X register to store the intermediate values as we work through the
+
+In this first tutorial your goal is to move a specific file with the ID 200 from the operations. Type the following code into your default empty EXA:
+host named “inbox” to the host named “outbox.” You’re going to move it through the
+link with the ID 800. |A|[|>| XA
+
+Launch EXODUS and connect to the tutorial network. A new blank solution will
+LINK 899 Traverse link 800 to enter the network
+
+automatically be created for you. (A “solution” is just a collection of EXAs that begin Grab file 200
+to execute when you press the run button.) GRAB 299
+
+COPY FX Read from F and write the value to X
+You’ll see an empty EXA with a blank code window on the left side of the screen. ADDI XF Calculate X + F and write the result to X
+
+Type these five lines of code into the EXA: MULI XF Calculate X >< F and write the result to X
+SUBI XF Calculate X - F and write the result to X
+COPY XF Read from X and write the value to F
+
+|A‘[|>l XA
+LINK 899 Traverse link 800 from “inbox“ to “outbox”
+
+LINK 899 Traverse link 800 to enter the network DROP Drop the held file
+
+GRAB 299 Grab file 200 HALT Terminate the EXA
+
+LINK 899 Traverse link 800 from “inbox“ to “outbox”
+As you step through the program and execute the GRAB instruction, notice how
+
+DROP Drop the held file the window for file 200 shows up beneath the window for the EXA now holding it.
+HALT Terminate the EXA
+
+Also look for the “file cursor” in the file window, highlighting the first value in the
+file. When an EXA reads from the F register it'll read the value pointed at by the file
+
+Press the step button to step through the program one instruction at a time. When cursor. Likewise, writing to the F register replaces the value pointed at by the file
+you get bored you can press the run button to watch it run on its own. cursor. If the file cursor is at the end of the file it will append the new value instead
+
+Once you’ve verified the program is doing what you want, you can hit the fast- of replacing an existing one.
+forward button to let your program run until it’s finished. Congratulations, you just One more thing. Reading or writing the F register automatically moves the file
+programmed your first EXA. cursor to the next value in the file. Sometimes that’s convenient. Sometimes it isn’t.
+
+w NEXT PAGE PP)
+
+- 
+
+
+
+This next tutorial involves a file that can only be accessed through a one-way link. Your final task is to create a file that contains a sequence of numbers. To do this,
+The EXA that goes to grab the file will be trapped, so you’ll need to create two EXAs you’re going to want to use something called a loop, which is where you repeatedly
+and have them communicate with each other. run a few lines of code until a stopping condition is met. Here are some hints:
+
+I ll let you figure out the code for this one on your own, but here are some hints:
+Q You can compare registers and/or values with the TEST instruction, like testing if X equals
+
+You can create a new file with the MAKE instruction. The file it creates will be empty by 38 (TEST X = 38). Ifthe test is true, the T register is set to I. Ifthe test is false, the T
+
+default, and it will be automatically held by the EXA that created it. register is set to 0.
+
+An EXA can delete the file it's holding with the WIPE instruction. Q On their own TEST instructions aren't that useful, but if you combine them with conditional
+jump instructions (TJMP and FJMP) you can jump to different parts of the program
+
+Two EXAs can communicate with each other using the M register. If one EXA writes a value depending on the result of the test. T3 MP (jump if true) works when the T register is set
+to the M register and another EXA reads from the M register, the value gets transmitted to I. FJMP (jump if false) works when the T register is set to 0. See the connection? You'll
+from the writer to the reader. need to specify the jump target with a MARK instruction somewhere else in your program.
+
+If an EXA is reading the M register while no one is writing to it, or vice versa, it'll wait Q Here's an example of a loop. Say you wanted to write the value 9999 to a file I0 times. You
+until another EXA picks up the other end of the communication. You don't need to time it could do it like this, which keeps track of the number of times it’s gone through the loop in
+perfectly. the X register:
+
+There’s a toggle switch in the EXODUS user interface that lets you set the M register to IAIEIPI XA [T15]
+global or local operation. In global mode, two EXAs can communicate anywhere in the
+network as long as there’s a path of links connecting them. In local mode, two EXAs COPY 9 X Reset the X register to O
+can only communicate if they’re in the same host. Finally, an EXA in global mode can't MARK LOOP Define a label called LOOP
+communicate with an EXA in local mode, even if they are in the same host. COPY 9999 F Write 9999 to the held file
+
+ADDI X 1 X Increment X by I
+TEST X = 19 Test if X equals IO and store the result in T
+FJMP LOOP Jump to LOOP ifX does not yet equal IO
+
+Q When the TJMP and FJMP instructions look at the value in T, they don’t care if that value
+was put there by a TEST instruction or if you put the value there yourself. You can actually
+store whatever data you want in the T register, as long as you’re okay with it being wiped
+next time you execute a TEST instruction.
+
+Alright, you’re through the tutorials now. Congratulations. Consider yourself a real
+EXA programmer. There’s always more to learn, but the basics are all there.
+
+<  -
+
+
+
+and how to EXPLOIT them
+ometimes EXAs try to do something that they’re not allowed to do.
+When this happens, that EXA is automatically terminated by the host. It’s
+
+functionally the same as if it ran a HALT instruction. Although most errors are Sometimes you don’t know all the details of the host
+boring and not useful, there are some can be used to your advantage. you’re working with. Links can change, files can disappear.
+
+There are some things you can only learn about your
+operating environment by attempting to execute code and
+potentially failing. It might strike you as messy, but it’s not
+
+Let's start with some of the boring ones: like you’re working at some big software company where
+you’ll be frowned on for that kind of messiness (or if you
+are, I’m sorry, maybe think about changingyour life around).
+
+O Divide by zero The only thing that counts here is getting thejob done.
+You can’t divide by zero on a computer. Some kind of math thing. Don't worry too
+much about understanding why. Just don’t do it.
+
+‘ Math with keywords I—Iere are some that are more exploitable:
+You can’t perform operations like addition, subtraction, multiplication, etc. with
+keywords. Math is restricted to numerical values.
+
+Q Invalid F register access Q Invalid file access
+If your EXA reads or writes the F register when it’s not holding a file, it’ll error out Say you were looking for a specific file. The EXA that tries
+and die. Don't forget to pick up the file first. it will terminate, but now you know the file isn’t there.
+
+Q Invalid hardware register access Q Invalid link travgrsal
+Similarto the last one. Make sure you’re in the same host as the hardware register Say you were looking for a specific link. The EXA that tries
+you want to access before you try to read or write it. it will terminate, but now you know the link isn’t there...
+
+sensing a pattern?
+
+You’ll probably see plenty of those errors as you code and fix them as you go.
+But let’s talk about the more interesting type of error now. Seriously, don’t be afraid of letting your EXAs error out,
+
+crash, die, whatever you want to call it. They might look
+cute to you but remember their purpose in life is to spawn,
+compute, and die repeatedly. You can take advantage of that
+
+,lIElKl[lHS in your programs.
+
+
+
+1  _
+
+ 
+
+[ HARDWARE REGISTERS ]
+
+4%XI= E204 Language Reference Guide Some hosts running the EXA-VM may provide access to connected hardware .thro‘t1gh
+the use of hardware registers. Valid names for hardware registers are a pound sign ( # )
+followed by four characters, such as #POwR or #ENAB. Depending on the hosts clglnfigiiration
+hardware registers may be readable and writable, only readable, or only writa e.
+
+he EXA virtual machine (EXA-VM) allows many execution agents (EXAs) to execute
+in a shared network ofhost computers. Within a network, EXAs can be dynamically [ INSTRUCTIONS ]
+
+created, destroyed, and transferred from one host to another. The EXA-VM enables all
+EXAs to run independently and simultaneously, even when multiple EXAs are located
+within the same host. Manipulating Values
+
+An EXA’s program consists of a series of instructions. Each instruction requires zero COPY R/N R
+or more operands. The operands required by each instruction are specified using short
+abbreviations: Copy the value of the first operand into the second operand.
+
+ADDI R/N R/N R
+R A register Add the value of the first operand to the value of the second operand and store the
+R/N A register, or a number between -9999 and 9999 result in the third operand.
+L A label defined by a MARK pseudo-instruction The same syntax is used for the Sl:IBI (subtraction), MULI (multiplication), DIVI
+
+(division), and MODI (modulo) instructions.
+
+SNIZ R/N R/N R
+[ R1:e|sT1:Rs ] Swizzle the value of the first operand using the value of the second operand as a swizzle
+
+mask and store the result in the third operand. The swizzle instruction can be used to
+The X register is a general-purpose storage register and can store a number or a rearrange and/or extract the digits in a number as shown:
+keyword.
+
+Input Mask Result Input Mask Result
+The T register is a general-purpose storage register and can store a number or a 0709 4321 0709 6709 -4321 -6789
+keyword. It is also the destination for TEST instructions, and is the criterion for 6789 1234 9876 -6789 -4321 6789
+conditional jumps (TJMP and FJMP). 6789 3333 7777 6789 2000 8000
+
+6709 1211 9099 6709 0001 0009
+The F register allows an EXA to read and write the contents of a held file. When an
+EXA grabs a file, its “file cursor” will be set to the first value in the file. Reading from
+the F register will read this value; Writing to the F register will overwrite this value.
+After reading or writing the F register, the file cursor will automatically advance.
+Writing to the end of the file will append a new value instead of overwriting.
+The M register controls an EXA’s message-passing functionality. When an EXA writes MARK L
+to the M register the value will be stored in that EXA’s outgoing message slot until Mark this line with the specified label. MARK is a pseudo-instruction and is not executed
+another EXA reads from the M register and receives the previously written value.
+Both numbers and keywords can be transferred in this way. JUMP L
+If an EXA writes to the M register, it will pause execution until that value is read by jump to the specified label.
+another EXA. If an EXA reads from the M register, it will pause execution until a
+value is available to be read. If two or more EXAs attempt to read from another EXA TJMP L
+at the same time (or vice versa), one will succeed but which one succeeds will be jump to the specified label if the T register equals 1 (or any value other than 0). This
+unpredictable. corresponds to a TEST result that was true.
+By default, an EXA can communicate with any other EXA in the same network. This F JMP L
+can be restricted to EXAs in the same host by toggling the global I local setting in
+the EXODUS interface, or by executing a MODE instruction. An EXA in global mode jump to the specified label if the T register equals 0. This corresponds to a TEST result
+cannot communicate with an EXA in local mode, even if they are in the same host. that was false.
+
+______
+ 
+
+- 
+
+
+
+L___i_i_i
+ -4
+
+[ INSTRUCTIONS (coi\i-r.) II
+INSTRUCTIONS (CONT)
+
+File I\/Ianipulation
+
+MAKE
+TEST R/N = /
+
+Compare the value of the first operand to the value of the second operand If they are Create and grab a new file.
+equal, set the T register to 1, otherwise set the T register to 0 The same syntax is used GRAB R/N
+for the < (less than) and > (greater than) tests Grab the file with the specified ID.
+
+TEST R/N = R/N TEST R/N < R/N TEST R/N > R/N FILE R
+Number I Number Test equality Test numerical order Copy the ID of the held file into the specified register.
+
+Keyword I Keyiirord Test equality Test alphabetical order
+Number! Keyword Always false SEEK R/N
+
+-1-iii Move the file cursor forward (positive) or backward (negative) by the specified number
+of values.
+If SEEK would move the file cursor past the beginning or end of the file it will instead
+be clamped. Thus, you can use values of -9999 or 9999 to reliably move to the
+
+REPL L beginning or end of the file.
+Create a copy of this EXA and jump to the specified label in the copy VOID F
+If an EXA is holding a file when executing a REPL instruction the file will not be copied
+and will remain held by the original EXA Remove the value highlighted by the file cursor from the currently held file.
+
+DROP
+Drop the currently held file.
+
+Terminate this EXA If it was holding a file, the file is dropped
+NIPE
+
+Delete the currently held file.
+Terminate another EXA in the same host as this EXA prioritizing EXAs created by
+the same user If there is more than one possible target, the target will be chosen in an TEST EOF
+unpredictable manner If the file pointer is currently at the end of the held file, set the T register to 1, otherwise
+
+set the T register to 0.
+EICITIEICIC
+
+LINK R/ N Miscellaneous
+Traverse the link with the specified ID
+
+NOTE
+HOST R Any text following the NOTE pseudo-instruction will be discarded when compiling,
+
+Copy the name of the current host into the specified register allowing it to be used to write “comments” to document the code. Any text following
+a semicolon, anywhere on a line, will also be discarded.
+
+NOOP
+Do nothing for one cycle.
+
+Toggle the M register between global and local mode RAND R/N R/N R
+Generate a random number between the first and second operands (inclusive) and
+
+VOID M store the result in the third operand.
+Read and discard a value from the M register
+
+TEST MRD
+If this EXA could read from another EXA without pausing, set the T register to 1
+otherwise set the T register to 0
+
+ 
+ __m
+
+
+
+\
+-|
+
+I t‘
+||_
+ll
+
+H mystery disease known colloquially as “the phage” that slowly turns the Beyond this, understanding of the phage is still poor, so speculation
+human body into computer parts sounds like the realm of science fiction or has rushed to fill the gap. Claims that the phage is an escaped experiment
+conspiracy theorists, but in this case it’s sadly all too real. The phage is known from a secret government lab researching human-computer interfaces are
+to the medical community as Progressive Neuroplastic Dysfunction (which unverifiable, as are any of the frankly silly ideas around a kind of mystical
+is outdated and not an accurate name at all), or the lesser-used Wurzner’s “computer rapture” where carbon and silicon life forms will join together to
+Syndrome. form a new higher form of consciousness.
+
+At first blush, turning into a computer may sound cool- like becoming a One thing we can empirically test is the idea that the phage was indeed
+cyborg. Unfortunately, the phage does not turn your body into anything that originally designed as a way to facilitate direct human-computer interfaces.
+resembles a working computer. If left unchecked, the phage leaves the body a As a graduate student at a respected medical school, I was able to use the lab
+lifeless amalgamation of purposeless circuitry. to do a little “off the books” experiments of my own with an acquaintance
+
+afiiicted with the disease. For obvious reasons we are both going to remain
+We know that people who use computers frequently are more inclined to anonymous.
+
+get it, with all known incidents occurring in people who use computers for
+eight hours a day or more. It spreads over the course of six to eighteen months
+from the extremities (often the hands, but occasionally the feet) toward the E Interfacing with phage nodes as EXA hosts
+body’s core, slowly replacing the body’s cells with connected structures of a
+plastic-like substance containing semi-conductive sub-structures. Perhaps the most interesting thing about phage-infected tissue is that it
+
+does in fact seem to provide interfaces that can be connected to with off-the-
+Currently the best option for treating the phage is to cut away the affected shelf hardware debuggers. I used a l\/litsuzen HDI-10, typically used to debug
+
+tissue as fast as it appears, which is hardly an ideal solution. Several other EXA-based embedded systems, for the experiment described here.
+treatments are in development. One off-label oral medication seems to be
+effective at slowing its spread, but is prohibitively expensive for the majority NEXT PAGE PP}
+ofwould-be patients.
+
+ 
+
+
+
+1' SUNNY'S SURPLUS
+By replacing the HDI-10’s probes with conductive, high-precision tweezers, SURPLUS
+
+I was able to connect to the phage node cluster shown in the microscope image /'sarples/
+below. Each phage node was enumerated as a small host, with corresponding
+links between connected phage nodes. In the absence of proper link IDs, the
+firmware for the HDI-10 appears to auto-enumerate its own. an amount of something left over
+
+when requirements have been met;
+an excess of production or supply
+
+Mi over demand.
+ 
+
+I PR/CE5 50 L01/U THE)/‘LL K/\/06 K
+YOUR M/RROR5HHD E5 OFF!
+
+Ill it PAGERS $30
+Vit DIGICAMS $30
+
+it DATAPHON ES $75
+it DESKTOP HYDRAS $150
+
+It’s known that phage nodes have an afiinity for nerve (and nerve-like) cells, it SOFTMODEMS $15
+disrupting neural behavior and causing the degenerative symptoms associated PE/Q50/V i HARDWARE |\/IODEIVIS $50
+with the disease. Further supporting the idea that the phage was designed to /91.
+support human-computer interactions, phage nodes connected to nerve cells if/[DE RIQA/GAEO47/DUTE/Q5 FRO
+
+present hardware registers in their corresponding hosts that allow the electric
+potential of the attached nerve cells to be measured, excited, and suppressed. 470/Qy E L)/_3‘3
+
+Units appear to be in millivolts; for the uninformed, nerves have a resting 0” W00
+potential of around -70 mV, can spike up to around 50 mV when excited, and (/LE5 p/Q0
+can fall as low as -120 mV when suppressed. ”7$5O/
+
+Injecting EXAs into phage nodes? 19/IY
+Given this initial work, it seems like it should be possible to inject EXAs /%9 ’/J§
+
+into phage nodes in a human host and program them to repair neural —(_§\J\.{J
+‘\<2i9\
+
+Q\
+
+processes that have been disrupted by the growth of those very same phage "<9"x<e%9:3e<‘<9§;-%' &%§'
+-.
+
+xx \.\'\
+
+nodes. I would like to try this next, but it is an obviously risky procedure and \19x©1 |. \'‘9
+is frowned upon in the medical community (hence the need for secrecy here).
+It’s unfortunate that a one-off, custom therapy like this would be unlikely to MONTHLY SDECIFILS:
+get regulatory approval. I’m going to be making an attempt to perform this and 15" MONITORS (MILITFIRY SURPLUS) $50
+will report back with more information. BFICI-(UP TFIPE / TFIPE DRIVE $5/$4-O
+
+IMFIGEVVORI-(S FRFIMEGRFIBBER $20
+VECTOR COPROCESSOR (TEC-PC) $40
+
+
+
+E CHANGING THE MESSAGE
+
+Once you’re in, these signs accept messages in the form of a series
+of three-number packets written to #DATA. The first number is the row
+(starting at 0), the second is the column (also starting at 0), and the third
+corresponds to the character you want to display. And then there are
+usually a few more registers that are fun to mess with. Most I’ve seen
+have one called #CLRS which clears the sign if you write anything to it.
+Others signs have effects you can activate like flashing or inverted text.
+
+Here’s a common character table:
+
+- 5-E 1o-:|15-o20-r25-Y30-335-
+-A 6-F 11-K16-P21-U26-Z31-436-
+-B 7-rs 12-L 17-Q 22-v 27-a 32-5 37-
+
+3-C 8-H 13-M18-R23-l/il28-133-638-
+
+know l’m not the only one with fond memories of pranking -0 9-I 14-N 19-s 24-x 29-2 34-7 39-
+electronic highway signs. The locks on the keypads were easy to
+pick, and a lot of times they weren’t even locked at all, so it used to
+be really easy to change their messages from your usual, humdrum PROOF OF CONCEPT
+
+CONSTRUCTION AHEAD or LEFT LANE CLOSED to more fun
+things like NO SPEED LIMIT or HAIL SATAN. Below is a picture documenting a highway sign that “someone” may
+
+have hacked into. It goes without saying that whoever committed this
+Alas, for a long time people thought it wouldn’t be possible anymore, heinous act should be ashamed of themselves and has nothing to do
+
+thanks to local transportation agencies who got wise to our wholesome with me...
+activity and have been replacing their old highway signs with an
+expensive new network-based version that’s only programmable from
+central headquarters. If the only way to change the sign is remotely,
+surely the kids couldn’t tamper with them anymore. Right?
+
+Kids, you know how this story goes: These new remote highway
+signs are a little trickier to access, but still simple to change to whatever
+you want. All you need is the information here and the right phone
+number and you too can bring a smile to a corporate wage slave who’s
+stuck in trafiic yet again.
+
+:1
+by Island Mikey |
+
+  "
+
+
+
+D I G I C A S H
+hese days corporations large CUSTOMER DATABASE The customer database (usually file 200) stores a
+
+T and small are rushing to list of customers with three values for each customer: The customer ID, dollars
+turn all of their transactions into owed, and cents owed.
+
+DIGITAL transactions. Why? It’s TRANSACTION LOG The transaction log (usually, you guessed it, file 201)
+better, that’s why! Don’t question stores a list of transactions with four values for each transaction: The date, the
+
+customer ID, the dollars paid, and the cents paid.
+it, just go along with the hype,
+
+You’ll also probably see a real-time clockmodule,which is is typically connected
+manll Of course, in their rush to to the primary host. This is used for time- stamping the transactions. Sometimes
+make everything digital they’ve there’s a small amount of customization for the client, either something as minor
+built everything fast and sloppy, as a custom network map graphic, or something more significant. For example
+leaving their systems almost a certain laundromat down the street from my apartment has integrated it with
+laughably insecure. In this article their washers and dryers.
+
+I’ll take a look at just one example, U I]
+V I x
+
+nuasn
+
+the DigiCash POS (which stands IIHASH “ 1? _
+
+for “point of sale”... any similarities nwasa fl K -I!-/.\ .
+...... <1lEiLii¥E:::|).a“nmQ - asss x“
+
+I _"- ' ""'_ Q» "
+
+to another acronym that could - ii \s
+1,, Q \ #DRYR
+
+indicate this product’s quality is “es. I1/‘~./..“‘-’-._ ‘V5-. g. \
+#DRY
+
+qr“ ‘V
+
+r”.a<yfi
+Gr' »
+
+purely coincidental). IIfigx‘\.‘4£%7 1 %
+
+\ aonvn ”“.Qiifini“
+/\ W\I ‘IvI“iiIf
+
+<..
+/\ i‘I'-II,‘
+
+hIi“f“?7
+DigiCash is a popular option for j-t“iF_ ,\‘7“\,;4i“Qa?fh»
+
+payment processing, especially for
+smaller businesses. It’s turned up MISSION STREET
+almost everywhere I’ve looked... LAIIDIIOMAT O O0
+
+L I I ,
+convenience stores, gas stations,
+laundromats, even tanning beds. Either way the main architecture is always the same. Given this information,
+And wouldn’t you know, all systems it seems like it would theoretically be pretty straightforward for a bad actor to
+
+add or remove transactions or balances, provided they got access to one of these
+by DigiCash have a technical systems...
+architecture in common!
+
+M  —
+
+
+
+Ill IHI IIIIIIIN
+
+IIIIIY SIHHIII SYSIIIIS
+Hard drive arrays
+
+he fast pace of computer technology means a lot of stuff gets left behind, and
+the rapid shift to EXA-based computing has left a lot of interesting data on older
+storage media. Accessing storage from before the EXA era can be awkward, but Arrays of hard drives are still used today for certain
+
+it can also be rewarding. You never know what you'll find! Here are a couple older applications. Because they store a file’s data across
+multiple drives they’re faster to read and write, but
+
+storage formats and how you can go about reading from them: also more complex to access than a single drive.
+Within the array, each drive is typically mapped to its
+
+Tape storage systems own host and contains up to 10 files, starting with file
+ID 200 up to file ID 209. Each file will contain 100
+
+Tape storage systems were often used for long-term values divided into 10 chunks of 10 values each.
+storage or backup. An EXA-accessible tape storage The first file (200) in the first drive should contain a
+system typically consists of one host per tape unit, table of all backup entries contained in the drive array.
+with each unit’s tape mounted as a file that can be read Each entry consists of the entry’s name followed by
+and written. the addresses of the chunks storing that entry’s data.
+
+Each tape contains zero or more backup entries. A chunk address is a number between 100 and 999
+The data for these entries starts at the beginning of that points to a chunk located somewhere in the drive
+the tape and is concatenated sequentially, making it array. The first digit indicates the drive that contains
+impossible to tell which data belongs to which backup the chunk (1-9), the second digit indicates the file
+entry. Boo! It’s gonna take some work to retrieve that that contains the chunk (0-9, mapping to files 200-
+data. 209), and the final digit indicates the location of the
+
+chunk within the target file (0-9, mapping to offsets 0
+Metadata for the entries is stored at the end of the through 90).
+
+file in three-value triplets. The first value is the entry’s
+name, the second value is the offset in the data stream For example, to retrieve chunk 527, you’d access
+where the entry’s data starts (0 = beginning), and the drive 5, grab file 202, seek to offset 70, and read
+third value is the length of the entry. the next 10 values (the size of a chunk). Hey, not so
+
+complex after all!
+For example, to get the data for an entry with
+
+metadata “SECRET, 3, 4”, you’d go to the beginning
+of the file, skip the first three values, and then read off
+the next four values (in order).
+
+
+
+II 0 R K H 0 U S E
+f you’ve ever needed some First you’ll see a “users” host, which contains a file for each
+
+I quick cash to make ends account. This file has the user’s name, date ofbirth, and a log ofhow much money
+meet you’ve probably considered that user earned each day. WorkHouse doesn’t want people defrauding them, go
+
+figure, so they presumably use this as part of a tracking system to make sure
+WorkHouse. The commercials their human cattle— whoops, I mean independent contractors— are behaving
+make it sound like a great option as intended.
+for extra money, but in practice the JOB DATABASE Then there’s a “jobs” host, which contains information about
+tasks are about as fun as watching the currently active jobs that can be offered to users, along with descriptions of
+paint dry. Imagine the joy of what these jobs entail.
+searching for duplicate entries in a
+giant database by hand, or looking
+at grainy pictures of pork cutlets 9
+trying to decide if they’re still good, ‘at<-av<-a
+or typing up receipts for some rich
+executive’s fancy dinners on the < ‘$5 ‘AAA9"’
+company dime. /\
+
+Seeing the kind of good honest /\
+/\aa
+
+labor that WorkHouse offers might
+make you less inclined to do the
+actual tasks, and more inclined to
+take a peek behind the curtain to But where are the tasks stored?, I hear you ask. Good
+see how this particular sausage is question. The tasks are actually served from the partner networks of companies
+made. Luckily, if you can connect requesting work, and are sent to workers directly. Presumably this is for
+to the server, the operation quickly simplicity... or perhaps it’s so WorkHouse has plausible deniability ofany sketchy
+
+tasks that come through the system.
+unravels in all its mechanical glory.
+
+Anyway, it’s a good thing everyone loves WorkHouse, the company that
+helps uplift people every day by paying them tiny amounts of money for doing
+repetitive, soul-sucking tasks. It sure would be terrible if something happened
+to them!
+
+M
+
+
+
+E QFUII Tsft B A N K
+H acking the BANK? Woah, Accounts are stored in individual files with one per account.
+
+what is this, some kind of Every account file starts with four values. It goes like this: The account number,
+crime manual? Of course not... we the account name, a number indicating what type of account it is (so far I’ve
+
+discovered that 2 indicates a checking account and 7 indicates a loan... the other
+all follow the law here, thank you numbers must be for other types of accounts), and then what always appears to
+very much! So don’t think you’re be a I, whatever that’s for. It could be a placeholder for future use.
+gonna read this article, connect After that, accounts are filled with sets of four values
+to Equity First and suddenly representing transactions: The account that the transaction is transferring from
+add $100,000 to your account. or to, either CREDIT or DEBIT depending on if the money is going in or out of
+
+You’re all smart enough to know a the account, and the dollars and cents for the amount of the transaction. Equity
+First checks automatically to ensure every credit transaction has a corresponding
+
+transaction that large will set the debit transaction to prevent obvious attempts to cook the books.
+alarm bells ringing and has a high
+chance of being caught by a fraud- Ielflfl as? IE]
+detection program. Or a computer c2o374, LINDA WALLACE, 2, j,
+security expert. c72s2o, DEBIT, 20, 74,
+
+ca4272, CREDIT, 400, ea,
+Now that I’ve set your ca4s72, DEBIT, 33, 50,
+
+expectations, let’s dive in. The Transfer $33.50 f1‘Om C29374 (LINDA WALLACE) ‘[0 C94872 (FASHION ALLEY)
+first thing to know is that even
+though Equity First is the biggest |*|I1>| 244 Iffil
+of the big banks that everyone ca4s72, FASHION ALLEY, 2, j,
+loves to hate, there’s no reason for c75293, CREDIT, 41, 33
+
+cs2732, CREDIT, 74, s1
+us to be intimidated. I was able to c2a374, CREDIT, 33, 50
+take a peek inside their network
+and what I found was that their At the back of the network you’ll see a number of ATMs connected
+internal server structures aren’t so over dial-up connections. Equity First ATMs only dispense 20 dollar bills, so
+
+the #CASH register tells you how many bills are remaining, as opposed to how
+different from any other bank. In much money is remaining. Ifyou write 20 to the #DISP register it will attempt to
+fact, they’re quite simple. dispense a bill, but if the ATM is out ofbills, it’ll send a failure message that alerts
+
+the bank. So be careful!
+
+M  -
+
+
+
+/ You’re a hacker; III SIIINIIIII lllllll
+you live in the network.
+
+Physical reality doesn't
+
+W0 D matter. You’re a mental The what? The broiler! It’s a feature ofyour oven, and here you’re gonna learn
+how to use it. Normally your oven attempts to heat evenly throughout the inside,
+
+construct, a presence, but putting it in broiler mode turns on an element at the top that radiates a
+ridiculous amount of heat down at whatever is directly below it. You use it for
+
+\ CHE a soul without making things crisp at the top or around the edges, the final touch. It’s the step
+40, / a contai.ner... that makes the chicken skin crispy, the cheese melted and bubbly, the lightly
+0 singed edges of a salmon steak. cooKi|~|e ROCKS!
+O The reason this works is that the broiler toasts the outside of the donut (which
+6
+
+makes them taste better) while caramelizing any icing or glaze on top (which
+- ell, maybe that’s your ideal. But right now I have some makes it crispy and extra-delicious). You can also do this in a toaster oven,
+
+W bad news: You’re still in a physical body! And that means although it probably won’t caramelize the icing like a broiler will. Do NOT use a
+you have to feed it, take care of it, etc. You know the drill. push-down toaster... the icing will drip down and burn and fill your house with
+
+After a while that gets boring and you don’t really think about smoke. And/or fire.
+it anymore. Now you have amazing warm donuts for absolutely free (or cheap)! There’s a
+
+Maybe your experience with this aspect of living begins and ton of great dishes you can finish off in the broiler but we’ll get to all that stuff
+ends with getting some snacks and soda from Last Stop. If it later. For now, enjoy your upgraded donuts.
+does, don’t worry. This column isn’t going to be about cooking
+that requires tons ofmoney, gourmet ingredients, or pro kitchen
+equipment. That stufi is boring. Plus it just doesn’t feel right
+given the world today. We need a school of food preparation Q Take your dumpster (or discount) donuts
+that results in tasty food, but works fully within this post-... well, Q Microwave them briefly until they're soft inside
+post-whatever society it is we’re living in now. (~10 seconds for a single donut)
+
+: %’regoing Z0 start simple. Presenting... O Put them on a metal tray or sheet of tin foil
+
+DU/‘IPS TER DONUTS Q Turn on your oven's broiler mode
+O Put them in your oven and adjust the rack so the donuts are
+
+about 2" below the broiler
+Yes, you read that right. You are going to liberate the perfectly
+
+good donuts they throw away every day at stores that sell them. O Keep the oven door open
+— Or, if you aren’t going to be able to stomach the idea of eating O Watch, since the broiler works hot and fast
+
+something out of the trash, pick them up when they’re marked
+down for being a day or two old. Either way, these donuts are O Take the donuts out after they start to brown but before they burn
+still fine— probably just a little stale. Here’s where the trick (~I-2 minutes)
+comes in: Use the broiler.
